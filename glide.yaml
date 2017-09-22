@@ -1,0 +1,7 @@
+package: github.com/sch00lb0y/autodock
+import:
+- package: github.com/labstack/echo
+  version: 3.2.3
+  subpackages:
+  - '...'
+- package: github.com/joho/godotenv
