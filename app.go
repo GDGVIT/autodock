@@ -13,9 +13,7 @@ import (
 
 func main() {
 	e := echo.New()
-	renderer := &echotemplate.TemplateRenderer{
-		Templates: template.Must(template.ParseGlob("views/*.html")),
-	}
+	renderer := echotemplate.New(template.Must(template.ParseGlob("views/*.html")))
 	e.Renderer = renderer
 	e.Static("/static", "static")
 	e.GET("/", func(c echo.Context) error {
