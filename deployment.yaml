@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: autodock
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels: # labels to select/identify the deployment
+        app: autodock 
+    spec:     # pod spec                  
+      containers: 
+      - name: autodock
+        image: schoolboy/autodock # image we pushed
+        ports:
+        - containerPort: 80

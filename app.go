@@ -19,6 +19,5 @@ func main() {
 	e.GET("/", func(c echo.Context) error {
 		return c.Render(http.StatusOK, "index.html", map[string]interface{}{})
 	})
-
 	log.Fatal(e.Start(":" + os.Getenv("PORT")))
 }
